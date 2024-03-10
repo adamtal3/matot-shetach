@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-image: url('./bg.jpeg');
+            background-repeat: repeat;
+            color: white;
+            font-family: Poppins, sans-serif;
+            text-align: center;
+            direction: rtl;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 300px;
+        }
+            ul li {
+                margin: 10px 0;
+                display: flex;
+                text-align: center;
+                -ms-align-content: center;
+                -webkit-align-content: center;
+                align-content: center;
+            }
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .commonButton {
+            background: #01e2c9; /* Old browsers */
+            background: -moz-linear-gradient(left, #01e2c9 0%, #01c8d4 55%, #01b0dd 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #01e2c9 0%,#01c8d4 55%,#01b0dd 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #01e2c9 0%,#01c8d4 55%,#01b0dd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01e2c9', endColorstr='#01b0dd',GradientType=1 ); /* IE6-9 */
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 9px 25px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="./headline.png" style="scale:1.25;margin-top:20px" />
+        <h1>מטות שטח</h1>
+        <ul id="list"></ul>
+    </div>
+
+    <script>
+        var groups = [
+            "אור-יהודה",
+            "אורנית",
+            "אילת",
+            "אשדוד",
+            "אשקלון",
+            "באר-יעקב",
+            "באר-שבע",
+            "בית-גוברין",
+            "בית-שמש",
+            "בת-ים",
+            "גבעתיים",
+            "גדרה",
+            "גליל-עליון",
+            "גני-תקווה",
+            "הוד-השרון",
+            "הרצליה",
+            "זכרון-יעקב",
+            "חדרה",
+            "חולון",
+            "חוף-הכרמל-ובנימינה",
+            "חיפה",
+            "יבנה",
+            "יהוד",
+            "ירושלים",
+            "כוכב-יאיר",
+            "כפר-ורדים",
+            "כפר-יונה",
+            "כפר-סבא",
+            "כפר-תבור",
+            "כרמיאל-ומשגב",
+            "מבשרת-ציון-והרי-ירושלים",
+            "מודיעין--מכבים--רעות",
+            "מצפה-רמון",
+            "נהריה-עכו",
+            "נס-ציונה",
+            "נתניה",
+            "עמק-המעיינות",
+            "עמק-חפר",
+            "עמק-יזרעאל",
+            "עפולה",
+            "ערד",
+            "פרדס-חנה",
+            "קריות",
+            "קריית-אונו",
+            "קריית-טבעון",
+            "קרית-גת",
+            "קרית-מלאכי-והסביבה",
+            "ראש-העין",
+            "ראשון-לציון",
+            "רחובות",
+            "רמת-גן",
+            "רמת-הנגב",
+            "רמת-השרון",
+            "רעננה",
+            "שוהם",
+            "תל-אביב"
+        ];
+
+        var list = document.getElementById('list');
+        groups.forEach(function (group) {
+            var li = document.createElement('li');
+            var name = group.replace(/\-/g, ' ');
+            li.innerHTML = '<a href="https://bringthemhome.click/' + group + '" class="commonButton">' + name + '</a>';
+            list.appendChild(li);
+        });
+
+    </script>
+</body>
+</html>
